@@ -2,7 +2,7 @@
 # *** Configuration ***
 
 # Your personal Slack URL key
-SLACK_HOOK=TKE4P7ERY/BMDCQU9T5/FdzfsMunYIzcOjSfGvYZAF54
+HOOK_URL=https://hooks.slack.com/services/...
 # The channel name to post
 CHANNEL="#monitoring"
 # Username for posting
@@ -25,7 +25,6 @@ if [ $# -eq 0 ]; then
 fi
 
 MESSAGE=$1
-HOOK_URL=https://hooks.slack.com/services/${SLACK_HOOK}
 HOST=$(hostname -f)
 
 if [ $# -eq 2 ]; then
