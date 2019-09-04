@@ -1,0 +1,10 @@
+[DEFAULT]
+
+# ban & send an e-mail with whois report and relevant log lines
+# to the destemail, then send SLACK message
+action_mwls = %(banaction)s[name=%(__name__)s, bantime="%(bantime)s", port="%(port)s", protocol="%(protocol)s", chain="%(chain)s"]
+             %(mta)s-whois-lines[name=%(__name__)s, sender="%(sender)s", dest="%(destemail)s", logpath=%(logpath)s, chain="%(chain)s"]
+             slack[name=%(__name__)s]
+
+
+action = %(action_mwls)s
